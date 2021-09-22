@@ -1,5 +1,29 @@
 .App {
   text-align: center;
+  margin-left: 9%;
+}
+.form {
+  margin-left: 5vw;
+  width: 500px;
+}
+
+#title {
+  margin-left: 45vw;
+}
+
+.search {
+  margin-left: 5vw;
+  width: 1150px;
+}
+
+#addHide {
+  margin-left: 2%;
+  margin-top: 1%;
+}
+
+#create {
+  margin-top: 1%;
+  margin-left: 35%;
 }
 
 .App-logo {
