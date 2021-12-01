@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Card, Row, Col, Divider, Input, Button } from "antd";
+import { Divider, Input, Button } from "antd";
 
 function AddFoodForm({ addFood }) {
   const [name, setName] = useState("");
@@ -23,13 +23,16 @@ function AddFoodForm({ addFood }) {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
+
     const newFood = {
       name,
       image,
       calories,
       servings,
     };
+
     addFood(newFood);
+
     setName("");
     setCalories("");
     setServings("");
@@ -49,7 +52,7 @@ function AddFoodForm({ addFood }) {
         <Divider>Add Food Entry</Divider>
         <div class="form">
           {" "}
-          <form onSubmit={handleFormSubmit}>
+          <form>
             <label>Name</label>
             <Input value={name} type="text" onChange={handleNameInput} />
 
@@ -70,9 +73,9 @@ function AddFoodForm({ addFood }) {
               onChange={handleServingsInput}
             />
 
-            <button id="create" type="submit">
+            <Button onClick={handleFormSubmit} id="create" type="submit">
               Create
-            </button>
+            </Button>
           </form>
         </div>
       </>

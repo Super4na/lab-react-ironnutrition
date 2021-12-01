@@ -11,11 +11,15 @@ function App() {
   const [filteredFoods, setFilteredFoods] = useState(foodsJSON);
 
   const addFood = (newFood) => {
-    setFoods([...foods, newFood]);
+    setFilteredFoods([...foods, newFood]);
   };
 
   const deleteFood = (name) => {
-    setFoods(foods.filter((food) => food.name !== name));
+    setFilteredFoods(
+      filteredFoods.filter((food) => {
+        return food.name !== name;
+      })
+    );
   };
 
   const searchFilter = (text) => {
@@ -32,9 +36,15 @@ function App() {
       <Search searchFilter={searchFilter} />
       <h1 id="title">Food List</h1>
       <div className="App">
-        <Row class="rows" gutter={[16, 16]}>
+        <Row className="rows" gutter={[16, 16]}>
           {filteredFoods.map((food) => {
-            return <FoodBox foods={food} deleteFood={deleteFood} />;
+            return (
+              <FoodBox
+                key={food.name + food.calories}
+                foods={food}
+                deleteFood={deleteFood}
+              />
+            );
           })}
         </Row>
       </div>
