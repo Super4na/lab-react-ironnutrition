@@ -21,7 +21,7 @@ function App() {
   const searchFilter = (text) => {
     setFilteredFoods(
       foods.filter((food) => {
-        return food.name.includes(text);
+        return food.name.toLowerCase().includes(text.toLowerCase());
       })
     );
   };

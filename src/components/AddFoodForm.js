@@ -70,9 +70,9 @@ function AddFoodForm({ addFood }) {
               onChange={handleServingsInput}
             />
 
-            <Button id="create" type="submit">
+            <button id="create" type="submit">
               Create
-            </Button>
+            </button>
           </form>
         </div>
       </>
