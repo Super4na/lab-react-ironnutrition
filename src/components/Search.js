@@ -6,14 +6,13 @@ function Search({ searchFilter }) {
 
   const handleSearchInput = (e) => {
     setSearch(e.target.value);
-    searchFilter(e.target.value);
+    searchFilter(e.target.value); //case sensitive
   };
 
   return (
     <>
       <Divider>Search</Divider>
       <div class="search">
-        <label>Search</label>
         <Input value={search} type="text" onChange={handleSearchInput} />
       </div>
     </>

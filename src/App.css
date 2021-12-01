@@ -2,28 +2,29 @@
   text-align: center;
   margin-left: 9%;
 }
-.form {
-  margin-left: 5vw;
-  width: 500px;
-}
-
-#title {
-  margin-left: 45vw;
-}
-
-.search {
-  margin-left: 5vw;
-  width: 1150px;
-}
 
 #addHide {
-  margin-left: 2%;
+  margin-left: 45%;
   margin-top: 1%;
+}
+
+.form {
+  margin-left: 33vw;
+  width: 35vw;
 }
 
 #create {
   margin-top: 1%;
   margin-left: 35%;
+}
+
+.search {
+  margin-left: 32vw;
+  width: 35vw;
+}
+
+#title {
+  margin-left: 45vw;
 }
 
 .App-logo {

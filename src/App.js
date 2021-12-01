@@ -1,11 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import foodsJSON from "./foods.json";
-import { Card, Row, Col, Divider, Input, Button } from "antd";
+import { Row } from "antd";
 import React, { useState } from "react";
-import FoodBox from "./FoodBox";
-import AddFoodForm from "./AddFoodForm";
-import Search from "./Search";
+import FoodBox from "./components/FoodBox";
+import AddFoodForm from "./components/AddFoodForm";
+import Search from "./components/Search";
 
 function App() {
   const [foods, setFoods] = useState(foodsJSON);

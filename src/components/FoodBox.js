@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Card, Col, Divider, Button } from "antd";
+import React from "react";
+import { Card, Col, Button } from "antd";
 
 function FoodBox({ foods, deleteFood }) {
   return (
